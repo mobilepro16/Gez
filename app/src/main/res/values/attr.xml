@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="util">
+        <attr name="font_face">
+            <enum name="regular" value="0" />
+            <enum name="light" value="1" />
+            <enum name="medium" value="2" />
+            <enum name="black" value="3" />
+            <enum name="bold" value="4" />
+        </attr>
+        <attr name="font_weight">
+            <enum name="normal" value="0" />
+            <enum name="light" value="1" />
+            <enum name="bold" value="2" />
+        </attr>
+        <attr name="pattern" format="string" />
+    </declare-styleable>
+</resources>

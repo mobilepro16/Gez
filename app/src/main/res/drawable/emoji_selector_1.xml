@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/emo_on_1" android:state_activated="false" android:state_checked="true" android:state_enabled="true" />
+    <item android:drawable="@drawable/emo_on_1" android:state_activated="false" android:state_checked="false" android:state_enabled="true" />
+    <item android:drawable="@drawable/emo_off_1" android:state_activated="false" android:state_checked="false" android:state_enabled="false" />
+    <item android:drawable="@drawable/emo_off_1" android:state_activated="false" android:state_enabled="false" />
+    <item android:state_activated="true">
+        <layer-list>
+            <item android:drawable="@drawable/emo_off_1" />
+            <item android:drawable="@drawable/red_cut_emoji" />
+        </layer-list>
+    </item>
+</selector>

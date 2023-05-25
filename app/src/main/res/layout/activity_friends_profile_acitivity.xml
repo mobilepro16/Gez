@@ -1,0 +1,779 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:paddingEnd="5dp"
+    android:paddingStart="5dp"
+    tools:context=".activities.FriendsProfileAcitivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <ImageButton
+            android:id="@+id/frnd_prof_home_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="6dp"
+            android:background="@null"
+            android:onClick="onFrndProfBackBtnClicked"
+            android:src="@drawable/menu_back" />
+
+        <TextView
+            android:id="@+id/frnd_prof_title_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:text="Friend"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_20sdp" />
+
+        <ImageButton
+            android:id="@+id/frnd_prof_delete_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:background="@null"
+            android:src="@drawable/menu_delete" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_240sdp"
+                android:gravity="bottom">
+
+
+                <ImageView
+                    android:id="@+id/frnd_prof_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:background="#80000000"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/frnd_name_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_30sdp" />
+
+                    <TextView
+                        android:id="@+id/frnd_last_seen_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/colorWhite" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/cardView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorWhite"
+                android:orientation="vertical"
+                android:padding="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutab"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="10"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline36"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/guideline100">
+
+                        <TextView
+                            android:id="@+id/frnd_prof_frnd_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/colorTextDark"
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@+id/barrier18"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.52" />
+
+                        <ImageButton
+                            android:id="@+id/frnd_prof_frnd_img"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@null"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintBottom_toTopOf="@+id/guideline33"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:srcCompat="@drawable/friends" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutab1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="10"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline37"
+                        app:layout_constraintStart_toStartOf="@+id/guideline36"
+                        app:layout_constraintTop_toTopOf="@+id/guideline100">
+
+                        <TextView
+                            android:id="@+id/frnd_prof_play_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/colorTextDark"
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@+id/barrier18"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.52" />
+
+                        <ImageButton
+                            android:id="@+id/frnd_prof_play_img"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@null"
+                            android:elevation="0dp"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintBottom_toTopOf="@+id/guideline33"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:srcCompat="@drawable/play" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutab2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="10"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline38"
+                        app:layout_constraintStart_toStartOf="@+id/guideline37"
+                        app:layout_constraintTop_toTopOf="@+id/guideline100">
+
+                        <TextView
+                            android:id="@+id/frnd_prof_won_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/colorTextDark"
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@+id/barrier18"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.52" />
+
+                        <ImageButton
+                            android:id="@+id/frnd_prof_won_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@null"
+                            app:layout_constraintBottom_toTopOf="@+id/guideline33"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:srcCompat="@drawable/won" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutab3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="10"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline39"
+                        app:layout_constraintStart_toStartOf="@+id/guideline38"
+                        app:layout_constraintTop_toTopOf="@+id/guideline100"
+                        tools:ignore="DuplicateIds">
+
+                        <TextView
+                            android:id="@+id/frnd_prof_lose_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/colorTextDark"
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@+id/barrier18"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.52" />
+
+                        <ImageButton
+                            android:id="@+id/frnd_prof_lose_img"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@null"
+
+                            android:scaleType="centerCrop"
+                            app:layout_constraintBottom_toTopOf="@+id/guideline33"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:srcCompat="@drawable/lost" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutab34"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="10"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline41"
+                        app:layout_constraintStart_toStartOf="@+id/guideline39"
+                        app:layout_constraintTop_toTopOf="@+id/guideline100">
+
+                        <TextView
+                            android:id="@+id/frnd_prof_add_gez_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/colorTextDark"
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@+id/barrier18"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.52" />
+
+                        <ImageButton
+                            android:id="@+id/frnd_prof_add_gez_img"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@null"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintBottom_toTopOf="@+id/guideline33"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:srcCompat="@drawable/btn_add_small" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutaz"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/prof_frnd_emoji_1_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+
+                            android:textColor="@color/colorTextDark"
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@+id/barrier18"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.52" />
+
+                        <ImageButton
+                            android:id="@+id/prof_frnd_emoji_1_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@null"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/emo_on_1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayouta6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/prof_frnd_emoji_2_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+
+                            android:textColor="@color/colorTextDark"
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold" />
+
+                        <ImageButton
+                            android:id="@+id/prof_frnd_emoji_2_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@null"
+                            app:srcCompat="@drawable/emo_on_2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayouta8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/prof_frnd_emoji_4_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+
+                            android:textColor="@color/colorTextDark"
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@+id/barrier18"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.52" />
+
+                        <ImageButton
+                            android:id="@+id/prof_frnd_emoji_4_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@null"
+                            app:srcCompat="@drawable/emo_on_4" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayouta10"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/prof_frnd_emoji_6_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+
+                            android:textColor="@color/colorTextDark"
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@+id/barrier18"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.52" />
+
+                        <ImageButton
+
+                            android:id="@+id/prof_frnd_emoji_6_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            app:srcCompat="@drawable/emo_on_6" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayouta9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/prof_frnd_emoji_5_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+
+                            android:textColor="@color/colorTextDark"
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@+id/barrier18"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.52" />
+
+                        <ImageButton
+                            android:id="@+id/prof_frnd_emoji_5_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@null"
+                            app:srcCompat="@drawable/emo_on_1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayouta7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/prof_frnd_emoji_3_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+
+                            android:textColor="@color/colorTextDark"
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@+id/barrier18"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.52" />
+
+                        <ImageButton
+                            android:id="@+id/prof_frnd_emoji_3_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@null"
+                            app:srcCompat="@drawable/emo_on_3" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorWhite"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/prof_rank_frnd_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorTextDark"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline34"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline35"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorRecyclerViewBackground" />
+
+                <TextView
+                    android:id="@+id/prof_name_usr"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:text="You"
+                    android:textColor="@color/colorTextDark"
+                    app:layout_constraintBottom_toTopOf="@+id/ll20"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline35"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorRecyclerViewBackground" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/prof_rnk_frnd_won_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/colorTextRed"
+                            android:textSize="@dimen/_10sdp"
+                            app:layout_constraintBottom_toTopOf="@+id/barrier18"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.52" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+
+                            <ImageButton
+                                android:id="@+id/prof_rnk_frnd_won_txt_img"
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/won" />
+
+                            <ImageView
+                                android:id="@+id/prof2_frnd_rank_img"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:visibility="visible"
+                                app:srcCompat="@drawable/cup" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/prof_rnk_frnd_prcnt_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/colorTextRed"
+                            android:textSize="@dimen/_10sdp"
+                            app:layout_constraintBottom_toTopOf="@+id/barrier18"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.52" />
+
+                        <ImageButton
+                            android:id="@+id/prof_rnk_frnd_lost_txt_img"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@null"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintBottom_toTopOf="@+id/guideline33"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:srcCompat="@drawable/percent" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/prof_rnk_frnd_play_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/colorTextDark"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <ImageButton
+                            android:id="@+id/prof_rnk_frnd_play_txt_img"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@null"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/play" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorRecyclerViewBackground" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/prof_rnk_usr_won_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/colorTextRed"
+                            android:textSize="@dimen/_10sdp"
+                            app:layout_constraintBottom_toTopOf="@+id/barrier18"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.52" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+
+                            <ImageButton
+                                android:id="@+id/prof_rnk_usr_won_txt_img"
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/won" />
+
+                            <ImageView
+                                android:id="@+id/prof2_usr_rank"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:visibility="visible"
+                                app:srcCompat="@drawable/cup" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/prof_rnk_usr_prcnt_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/colorTextRed"
+                            android:textSize="@dimen/_10sdp"
+                            app:layout_constraintBottom_toTopOf="@+id/barrier18"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.52" />
+
+                        <ImageButton
+                            android:id="@+id/prof_rnk_usr_lost_txt_img"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@null"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintBottom_toTopOf="@+id/guideline33"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:srcCompat="@drawable/percent" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/prof_rnk_usr_play_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/colorTextDark"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <ImageButton
+                            android:id="@+id/prof_rnk_usr_play_txt_img"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@null"
+                            android:scaleType="fitCenter"
+                            app:layout_constraintBottom_toTopOf="@+id/guideline33"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:srcCompat="@drawable/play" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

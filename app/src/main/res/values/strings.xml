@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Gez</string>
+    <string name="facebook_app_id">248610719210198</string>
+    <string name="fb_login_protocol">fb248610719210198</string>
+    <string name="title_activity_friends">FriendsActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="error_player">Error</string>
+</resources>
